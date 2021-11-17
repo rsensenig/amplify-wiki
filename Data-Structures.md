@@ -35,6 +35,10 @@ Way to understand volumes of letters being sent. This table will be used to meas
 * Street address, City, and State are strings
 * Zipcode is a string
 
+***
+
+### Stripe Payments Table
+![stripe](https://user-images.githubusercontent.com/66452376/142288686-d305f0e1-c83a-4f7e-bb54-96b37cf39e68.png)
 
 
 
