@@ -1,5 +1,25 @@
 # Campaigns table
-Describes the campaigns and the amount of letters sent for each campaign.
+
+Describes all campaigns and the number of letters sent for each campaign.
+
+## API reference
+
+[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Campaigns-API-Endpoints)
+
+## Data description
+
+|Column Name|Data Type|Description|
+|---|---|---|
+|id|integer|Auto-increments with each new campaign added. _(Not editable.)_|
+|organization|string|The name of the organization responsible for this campaign.|
+|name|string|The name of this particular campaign.|
+|cause|enum Must be one of: `Civic Rights`, `Education`, `Climate Justice`|The cause this campaign is supporting.
+|type|enum Must be one of: `Starter`, `Accelerator`, `Grant`| The type of campaign this is.
+|page_url|varchar|The URL for this campaign's call to action.|
+|letters_counter|integer|The number of letters sent for this campaign.|
+
+## Example
+
 ![CampaignTable](https://user-images.githubusercontent.com/66452376/142286849-cc5f817c-8503-4b76-93a0-3902b030f25e.png)
 
 ***
