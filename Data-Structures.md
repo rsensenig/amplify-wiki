@@ -15,7 +15,7 @@ Describes all campaigns and the number of letters sent for each campaign.
 |name|string|The name of this particular campaign.|
 |cause|enum Must be one of: `Civic Rights`, `Education`, `Climate Justice`|The cause this campaign is supporting.
 |type|enum Must be one of: `Starter`, `Accelerator`, `Grant`| The type of campaign this is.
-|page_url|varchar|The URL for this campaign's call to action.|
+|page_url|text|The URL for this campaign's call to action.|
 |letters_counter|integer|The number of letters sent for this campaign.|
 
 ## Example
