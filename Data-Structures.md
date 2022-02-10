@@ -40,12 +40,12 @@ Returns information about letter versions using a `campaignid` as a search key.
 ### Data description
 |Column Name|Data Type|Description|
 |---|---|---|
-| id | | used to create join or belong relationships for Users, Campaigns, and Letters sent |
-| template_id | string | lob html template |
-| office_division | enum Must be one of: `Federal`, `State`, `County`, `Municipality` | each campaign has a different letter dependent on filter. Federal is the default. |
-| state | string | Custom letter versions per state |
-| county | string | Custom letter versions per county |
-| CampaignID | integer | maps to campaigns table |
+| id | integer | Auto-increments with each new letter version added. _(Not editable.)_ . This is used to create join or belong relationships for Users, Campaigns, and Letters sent. |
+| template_id | string | The lob html template id. |
+| office_division | enum Must be one of: `Federal`, `State`, `County`, `Municipality` | Each campaign has a different letter dependent on filter. Federal is the default. |
+| state | string | The state this letter version is for. |
+| county | string | The county this letter version is for. |
+| CampaignID | integer | Used to map to campaigns table |
 
 ### Example
 
@@ -53,33 +53,73 @@ Returns information about letter versions using a `campaignid` as a search key.
 
 ***
 
-## letter_sent table
+## Letter Sent table
 Way to understand volumes of letters being sent. This table will be used to measure conversion for letter_upload, user_volunteer and user_campaign. 
+
+### API reference
+
+### Data description
+|Column Name|Data Type|Description|
+|---|---|---|
+| id | integer | Auto-increments with each new letter sent added. _(Not editable.)_ |
+| letter_version_id | integer | foreign key that references `id` in the `letter_versions` table |
+| volunteer_id | integer | foreign key that references `id` in the `volunteers` table |
+| request_id | string | the Lob API response ID, for tracking and management purposes |
+| requested_at | timestamp |  |
+| rep_name | string |  |
+| rep_address | string | |
+
+### Example
 ![letter_sent](https://user-images.githubusercontent.com/66452376/142287216-168da2ae-9bb6-48b7-a713-12f2ecc06ed8.png)
 
 ***
 
 ## Constituent Table
-![constituent](https://user-images.githubusercontent.com/66452376/142287512-31914818-416b-4c14-b660-1c77abe39167.png)
-
 *This information is collected from review letter screen
 * Letters sent holds id of letter that was successfully posted with Lob (payment and address verification went through) 
 * User agreement is a boolean that they abide by the platforms best practices 
 * Updates is sending campaign_id so that we can send to advocacy groups so they can follow up and by our user education team 
 * Street address, City, and State are strings
 * Zipcode is a string
+### API reference
+
+### Data description
+|Column Name|Data Type|Description|
+|---|---|---|
+
+### Example
+![constituent](https://user-images.githubusercontent.com/66452376/142287512-31914818-416b-4c14-b660-1c77abe39167.png)
+
 
 ***
 
 ## Stripe Payments Table
+
+### API reference
+
+### Data description
+|Column Name|Data Type|Description|
+|---|---|---|
+| day | | |
+| id | | |
+| amount | | |
+| currency | | |
+| source_id | | |
+| type | | |
+### Example
 ![stripe](https://user-images.githubusercontent.com/66452376/142288686-d305f0e1-c83a-4f7e-bb54-96b37cf39e68.png)
 
 ## Volunteer user table
 
-Consisting of
-- name (string)
-- address (string) 
-- letters sent (array of string template_ids)
+### API reference
 
+### Data description
+|Column Name|Data Type|Description|
+|---|---|---|
+| name | string| |
+| address | string | |
+| letters | array of string `template_id` | |
+
+### Example
 
 
