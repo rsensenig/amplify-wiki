@@ -4,7 +4,7 @@ Describes all campaigns and the number of letters sent for each campaign.
 
 ## API reference
 
-[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Campaigns-API-Endpoints)
+[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Campaigns-API-Endpoints) Retrieving information for all campaigns in the table or just one.
 
 ## Data description
 
@@ -17,6 +17,8 @@ Describes all campaigns and the number of letters sent for each campaign.
 |type|enum Must be one of: `Starter`, `Accelerator`, `Grant`| The type of campaign this is.
 |page_url|text|The URL for this campaign's call to action.|
 |letters_counter|integer|The number of letters sent for this campaign.|
+
+(something is modding `letters_counter`, have not yet identified when and how often)
 
 ## Example
 
