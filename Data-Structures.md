@@ -27,17 +27,29 @@ Describes all campaigns and the number of letters sent for each campaign.
 ***
 
 ## letter_versions table
+
 This data is sent to Lob, primarily **template_id** which is specific to each campaign by **office division**.
 This data structure triages the letter object that's being _displayed_ and _sent_, specific to the template_id of the region that's being picked by the office.
 
-​​![LetterVersions](https://user-images.githubusercontent.com/66452376/142286635-02c098db-fa85-4922-952b-0a21abc05a0e.png)
+### API reference
 
-* keyID: use to create join or belong relationships for Users, Campaigns, and Letters sent
-* template_id: lob html template
-* office_division: each campaign has a different letter dependent on filter. Federal is the default.
-* state: Custom versions per state
-* county: Custom versions per county
-* CampaignID: maps to campaigns table 
+[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Letter_Versions-API-Endpoints)
+
+Returns information about letter versions using a `campaignid` as a search key.
+
+### Data description
+|Column Name|Data Type|Description|
+|---|---|---|
+| id | | used to create join or belong relationships for Users, Campaigns, and Letters sent |
+| template_id | string | lob html template |
+| office_division | enum Must be one of: `Federal`, `State`, `County`, `Municipality` | each campaign has a different letter dependent on filter. Federal is the default. |
+| state | string | Custom letter versions per state |
+| county | string | Custom letter versions per county |
+| CampaignID | integer | maps to campaigns table |
+
+### Example
+
+​​![LetterVersions](https://user-images.githubusercontent.com/66452376/142286635-02c098db-fa85-4922-952b-0a21abc05a0e.png)
 
 ***
 
