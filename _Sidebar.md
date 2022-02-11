@@ -1,4 +1,5 @@
 * [Home](home)
+* [App Logic](App-Logic)
 * [API Quick Reference](Amplify-API-Reference)
 * Amplify API reference
   * [Campaigns API](Campaigns-API-Endpoints)
