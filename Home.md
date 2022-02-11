@@ -1,5 +1,6 @@
-# Documentation for the Back End Resources for Amplify
+# Welcome to the Amplify Front-end Wiki!
+## Documentation for the front and back End Resources for Amplify
 
 ## [API Quick Reference](Amplify-API-Reference)
 
-For detailed API parameters and usage, follow the links in the sidebar at the right.
+Use the links on the right to navigate through.
