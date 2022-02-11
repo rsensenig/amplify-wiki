@@ -4,7 +4,7 @@ Describes all campaigns and the number of letters sent for each campaign.
 
 ### API reference
 
-[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Campaigns-API-Endpoints) Retrieving information for all campaigns in the table or just one.
+[API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Campaigns-API-Endpoints)  Retrieve information for all campaigns listed in the table or just one.
 
 ### Data description
 
@@ -18,7 +18,7 @@ Describes all campaigns and the number of letters sent for each campaign.
 |page_url|text|The URL for this campaign's call to action.|
 |letters_counter|integer|The number of letters sent for this campaign.|
 
-(something is modding `letters_counter`, have not yet identified when and how often)
+_(Editor's note: Could not determine when/how `letters_counter` is modified)_
 
 ### Example
 
@@ -28,24 +28,22 @@ Describes all campaigns and the number of letters sent for each campaign.
 
 ## letter_versions table
 
-This data is sent to Lob, primarily **template_id** which is specific to each campaign by **office division**.
-This data structure triages the letter object that's being _displayed_ and _sent_, specific to the template_id of the region that's being picked by the office.
+This data is sent to Lob, primarily **template_id** which is specific to each campaign by **office division**.  This data structure triages the letter object that's being _displayed_ and _sent_, specific to the `template_id` of the region that's being picked by the office.
 
 ### API reference
 
 [API reference](https://github.com/ProgramEquity/amplify-back-end/wiki/Letter_Versions-API-Endpoints)
-
-Returns information about letter versions using a `campaignid` as a search key.
+Returns information about every letter sent for a campaign.
 
 ### Data description
 |Column Name|Data Type|Description|
 |---|---|---|
-| id | integer | Auto-increments with each new letter version added. _(Not editable.)_ . This is used to create join or belong relationships for Users, Campaigns, and Letters sent. |
-| template_id | string | The lob html template id. |
-| office_division | enum Must be one of: `Federal`, `State`, `County`, `Municipality` | Each campaign has a different letter dependent on filter. Federal is the default. |
+| id | integer | Auto-increments with each new letter version added. _(Not editable.)_ This is used to create join or belong relationships between Users, Campaigns, and Letters Sent. |
+| template_id | string | The Lob html letter template id. |
+| office_division | enum Must be one of: `Federal`, `State`, `County`, `Municipality`. Default: `Federal`| Each campaign contains a different letter to enable filtering.  |
 | state | string | The state this letter version is for. |
 | county | string | The county this letter version is for. |
-| CampaignID | integer | Used to map to campaigns table |
+| CampaignID | integer | Maps this letter to a campaign|
 
 ### Example
 
@@ -54,17 +52,20 @@ Returns information about letter versions using a `campaignid` as a search key.
 ***
 
 ## Letter Sent table
-Way to understand volumes of letters being sent. This table will be used to measure conversion for letter_upload, user_volunteer and user_campaign. 
+A way to understand volumes of letters being sent. This table is used to measure conversion rates for `letter_upload`, `user_volunteer` and `user_campaign`. 
 
 ### API reference
 
+None.
+
 ### Data description
+
 |Column Name|Data Type|Description|
 |---|---|---|
 | id | integer | Auto-increments with each new letter sent added. _(Not editable.)_ |
-| letter_version_id | integer | foreign key that references `id` in the `letter_versions` table |
-| volunteer_id | integer | foreign key that references `id` in the `volunteers` table |
-| request_id | string | the Lob API response ID, for tracking and management purposes |
+| letter_version_id | integer | Foreign key that references `id` in the `letter_versions` table |
+| volunteer_id | integer | Foreign key that references `id` in the `volunteers` table |
+| request_id | string | The Lob API response ID, for tracking and management purposes |
 | requested_at | timestamp |  |
 | rep_name | string |  |
 | rep_address | string | |
@@ -75,21 +76,29 @@ Way to understand volumes of letters being sent. This table will be used to meas
 ***
 
 ## Constituent Table
-*This information is collected from review letter screen
-* Letters sent holds id of letter that was successfully posted with Lob (payment and address verification went through) 
-* User agreement is a boolean that they abide by the platforms best practices 
-* Updates is sending campaign_id so that we can send to advocacy groups so they can follow up and by our user education team 
-* Street address, City, and State are strings
-* Zipcode is a string
+
+This information is collected from the review letter screen.
+
 ### API reference
 
+None.
+
 ### Data description
+
 |Column Name|Data Type|Description|
 |---|---|---|
+|Letters sent|Integer|The id of a letter that was successfully posted with Lob (payment and address verification went through) |
+|User agreement|Boolean|User agrees to abide by the platform's best practices |
+|Updates||Sends sending `campaign_id` so that we can send to advocacy groups so they can follow up and by our user education team <sup>*</sup> |
+|Street address|string||
+|City|string||
+|State|string||
+|Zipcode|string||
+
+<sup>*</sup> _Editor's note: This sentence was left as written._
 
 ### Example
 ![constituent](https://user-images.githubusercontent.com/66452376/142287512-31914818-416b-4c14-b660-1c77abe39167.png)
-
 
 ***
 
@@ -97,15 +106,21 @@ Way to understand volumes of letters being sent. This table will be used to meas
 
 ### API reference
 
+None.
+
 ### Data description
+
 |Column Name|Data Type|Description|
 |---|---|---|
-| day | | |
-| id | | |
-| amount | | |
-| currency | | |
-| source_id | | |
-| type | | |
+| day |timestamp |mm-dd-yyyy |
+| id || <sup>*</sup> |
+| amount | integer|The amount of the charge or refund. |
+| currency |string |Currency identifier|
+| source_id | | <sup>*</sup> |
+| type |string|Payment type: charge or refund |
+
+<sup>*</sup> _(Editor's note: Do not know what `id` and `source_id` are. It may be that one is the Amplify database identifier and the other is the Stripe identifier, so they can be mapped to each other.)_
+
 ### Example
 ![stripe](https://user-images.githubusercontent.com/66452376/142288686-d305f0e1-c83a-4f7e-bb54-96b37cf39e68.png)
 
@@ -113,7 +128,10 @@ Way to understand volumes of letters being sent. This table will be used to meas
 
 ### API reference
 
+None.
+
 ### Data description
+
 |Column Name|Data Type|Description|
 |---|---|---|
 | name | string| |
@@ -122,4 +140,4 @@ Way to understand volumes of letters being sent. This table will be used to meas
 
 ### Example
 
-
+None.
