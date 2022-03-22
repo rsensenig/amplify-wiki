@@ -1,4 +1,4 @@
-These APIs access information in the `campaigns` [table](https://github.com/ProgramEquity/amplify-front-end/wiki/Data-Structures#campaigns-table).
+These APIs access information in the `campaigns` [table](https://github.com/ProgramEquity/amplify-front-end/wiki/Data-Structures#campaigns-table) within database.
 
 ## Accessing a specific campaign
 
