@@ -16,6 +16,6 @@
 * Stripe API integration
   * [Setting up Apple Pay](Setting-up-Apple-Pay)
   * [Testing the Stripe API](Stripe-API-Endpoint)
-* Cicero API Integration
-* Twilio API Integration
+* [Cicero API Integration](Cicero-API-Integration)
+* [Twilio API Integration](Twilio-API-Integration)
 
