@@ -1,4 +1,4 @@
-## Campaigns table
+## `campaigns` table
 
 Describes all campaigns and the number of letters sent for each campaign.
 
@@ -26,7 +26,7 @@ _(Editor's note: Could not determine when/how `letters_counter` is modified)_
 
 ***
 
-## letter_versions table
+## `letter_versions` table
 
 This data is sent to Lob, primarily **template_id** which is specific to each campaign by **office division**.  This data structure triages the letter object that's being _displayed_ and _sent_, specific to the `template_id` of the region that's being picked by the office.
 
@@ -51,8 +51,9 @@ Returns information about every letter sent for a campaign.
 
 ***
 
-## Letter Sent table
-A way to understand volumes of letters being sent. This table is used to measure conversion rates for `letter_upload`, `user_volunteer` and `user_campaign`. 
+## `sent_letters` table
+
+A way to understand volumes of letters being sent. This table is used to measure conversion rates for `letter_upload`, `constituent` and `user_campaign`. 
 
 ### API reference
 
@@ -64,7 +65,7 @@ None.
 |---|---|---|
 | id | integer | Auto-increments with each new letter sent added. _(Not editable.)_ |
 | letter_version_id | integer | Foreign key that references `id` in the `letter_versions` table |
-| volunteer_id | integer | Foreign key that references `id` in the `volunteers` table |
+| constituent_id | integer | Foreign key that references `id` in the `constituents` table |
 | request_id | string | The Lob API response ID, for tracking and management purposes |
 | requested_at | timestamp |  |
 | rep_name | string |  |
@@ -75,7 +76,7 @@ None.
 
 ***
 
-## Constituent Table
+## `constituents` table
 
 This information is collected from the review letter screen.
 
@@ -123,21 +124,3 @@ None.
 
 ### Example
 ![stripe](https://user-images.githubusercontent.com/66452376/142288686-d305f0e1-c83a-4f7e-bb54-96b37cf39e68.png)
-
-## Volunteer user table
-
-### API reference
-
-None.
-
-### Data description
-
-|Column Name|Data Type|Description|
-|---|---|---|
-| name | string| |
-| address | string | |
-| letters | array of string `template_id` | |
-
-### Example
-
-None.
