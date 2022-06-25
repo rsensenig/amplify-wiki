@@ -14,7 +14,7 @@ Request body parameters
 |to|object|_parameters below_|
 |from|object|_parameters below_|
 |templateId|string|The Lob `template_id` created for this letter.|
-|sessionId|string|Stripe session id returned when a user has a redirection from Stripe checkout or returned from Stripe [API](https://stripe.com/docs/api/checkout/sessions/retrieve).|
+|sessionId|string|Stripe session id returned from checkout session redirect or from Stripe [API](https://stripe.com/docs/api/checkout/sessions/retrieve).|
 
 `to` is an address object with the following parameters. This address will be [verified](https://docs.lob.com/#operation/us_verification), recorded, and assigned an ID, if possible, when submitted.
 
