@@ -21,11 +21,11 @@ Request body parameters
 ```
 {
 name: 'Amy',
-line1: 'Address line 1',
-line2: 'Address line 2',
-city: 'San Francisco',
-state: 'CA',
-zip: '94101'
+address_line1: 'Address line 1',
+address_line2: 'Address line 2',
+address_city: 'San Francisco',
+address_state: 'CA',
+address_zip: '94101'
 }
 ```
 
