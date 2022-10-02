@@ -4,6 +4,10 @@
 * [Background](Background)
 * [Data Structures](Data-Structures)
 * [API Quick Reference](Amplify-API-Reference)
+* Front-end
+  * Components
+  * Pages
+  * State Management
 * Amplify API reference (Database)
   * [Campaigns API](Campaigns-API-Endpoints)
   * [Letter Versions API](Letter_Versions-API-Endpoints)
