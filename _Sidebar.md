@@ -5,7 +5,7 @@
 * [Data Structures](Data-Structures)
 * [API Quick Reference](Amplify-API-Reference)
 * Front-end
-  * Components
+  * [Components](components)
   * Pages
   * State Management
 * Amplify API reference (Database)
