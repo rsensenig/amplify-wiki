@@ -7,7 +7,7 @@
 * Front-end
   * [Components](components)
   * Pages
-  * State Management
+  * [State Management](State-Management)
 * Amplify API reference (Database)
   * [Campaigns API](Campaigns-API-Endpoints)
   * [Letter Versions API](Letter_Versions-API-Endpoints)
