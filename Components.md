@@ -32,7 +32,7 @@ Importantly, this component is also responsible for creating a transaction recor
 **Views:**
 * CompletePage.vue
 
-
+&nbsp;
 ## AppFooter.vue
 This component defines the footer of Amplify. It should hold important legalese, as well as site navigation and social media links.
 
