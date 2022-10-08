@@ -9,18 +9,18 @@ Importantly, this component is also responsible for creating a transaction recor
 **Props:** none.
 
 **Data:**
-  * loading _(boolean)_: If true, a loading animation will render while the transaction is recorded and campaign letter are generated.
-  * email _(string)_: User's email address. Returned by the back-end when a transaction is recorded but currently has no use.
-  * amount _(number)_: The amount of a user's campaign donation, in cents. Returned from createTransactionRecord (which it gets from the Stripe API). Shown in success message.
-  * expectedDeliveryDate _(string)_: The expected campaign letter delivery date returned from LOB API.
-  * congressMembers _(array of objects)_: List of congress people to display in subcomponent. Currently not implemented.
+  * loading _boolean_: If true, a loading animation will render while the transaction is recorded and campaign letter are generated.
+  * email _string_: User's email address. Returned by the back-end when a transaction is recorded but currently has no use.
+  * amount _number_: The amount of a user's campaign donation, in cents. Returned from createTransactionRecord (which it gets from the Stripe API). Shown in success message.
+  * expectedDeliveryDate _string_: The expected campaign letter delivery date returned from LOB API.
+  * congressMembers _array of objects_: List of congress people to display in subcomponent. Currently not implemented.
 
 **Computed Properties:**
-  * donationAmount _(number)_: amount converted from cents to dollars.
-  * selectedRep _(string)_: Returns from local state the Representative that was selected during the campaign letter generation process.
-  * userData _(object)_: Returns from local state user data to send to LOB API.
-  * letterId _(string)_: Returns from local state the campaign letter template id for LOB.
-  * lobReturnAddressId _(string)_: Returns from local state the return address id generated during the letter creation process.
+  * donationAmount _number_: amount converted from cents to dollars.
+  * selectedRep _string_: Returns from local state the Representative that was selected during the campaign letter generation process.
+  * userData _object_: Returns from local state user data to send to LOB API.
+  * letterId _string_: Returns from local state the campaign letter template id for LOB.
+  * lobReturnAddressId _string_: Returns from local state the return address id generated during the letter creation process.
 
 **Methods:**
   * createTransactionRecord(sessionId: string): void
@@ -31,3 +31,19 @@ Importantly, this component is also responsible for creating a transaction recor
 
 **Views:**
 * CompletePage.vue
+
+
+## AppFooter.vue
+This component defines the footer of Amplify. It should hold important legalese, as well as site navigation and social media links.
+
+**Props:** none.
+
+**Data:**
+  * icons _string[ ]_: A list of icon identifiers for social media buttons.
+
+**Computed Properties:** none.
+
+**Methods:** none.
+
+**Views:**
+  * Home.vue
