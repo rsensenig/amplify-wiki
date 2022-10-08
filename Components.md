@@ -46,4 +46,21 @@ This component defines the footer of Amplify. It should hold important legalese,
 **Methods:** none.
 
 **Views:**
-  * Home.vue
+  * App.vue
+
+&nbsp;
+## AppHeader.vue
+This component controls the navigation bar for the app.
+
+**Props:** none.
+
+**Data:**
+  * dialog _boolean_: Present, but unused.
+  * menuItems _Array<string, string>_: List of navigation links and their paths.
+
+**Computed Properties:** none.
+
+**Methods:** none.
+
+**Views:**
+  * App.vue
