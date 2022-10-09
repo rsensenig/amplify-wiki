@@ -28,9 +28,10 @@ Importantly, this component is also responsible for creating a transaction recor
   * createCampaignLetter(sessionId: string): void
     * Creates a campaign letter with LOB. Returns nothing, but modifies _expectedDelieryDate_ and _loading_ data attributes.
 
-
-**Views:**
+**Parent Components:**
 * CompletePage.vue
+
+**Child Components:** none.
 
 &nbsp;
 ## AppFooter.vue
@@ -45,8 +46,10 @@ This component defines the footer of Amplify. It should hold important legalese,
 
 **Methods:** none.
 
-**Views:**
+**Parent Components:**
   * App.vue
+
+**Child Components:** none.
 
 &nbsp;
 ## AppHeader.vue
@@ -62,5 +65,32 @@ This component controls the navigation bar for the app.
 
 **Methods:** none.
 
-**Views:**
+**Parent Components:**
   * App.vue
+
+**Child Components:** none.
+
+&nbsp;
+## AuthenticationButton.vue
+Handles whether a user will see a log in or log out button in Step 1 of the Amplify letter generation process.
+
+![Authentication Button](https://imgur.com/7pIpQyD.png)
+
+**Props:** none.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods:** none.
+
+**Parent Components:**
+  * AuthNav.vue
+
+**Child Components:**
+  * LogoutButton.vue
+  * LoginButton.vue
+
+&nbsp;
+## AuthNav.vue
+This component wraps the [AuthenticationButton](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue) component.
