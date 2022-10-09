@@ -85,7 +85,7 @@ Handles whether a user will see a log in or log out button in Step 1 of the Ampl
 **Methods:** none.
 
 **Parent Components:**
-  * AuthNav.vue
+  * [AuthNav.vue](https://github.com/ProgramEquity/amplify/wiki/Components/#authnavvue)
 
 **Child Components:**
   * LogoutButton.vue
@@ -94,3 +94,17 @@ Handles whether a user will see a log in or log out button in Step 1 of the Ampl
 &nbsp;
 ## AuthNav.vue
 This component wraps the [AuthenticationButton](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue) component.
+
+**Props:** none.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods:** none.
+
+**Parent Components:**
+ * LetterLoad.vue
+
+**Child Components:**
+  * [AuthenticationButton.vue](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue)
