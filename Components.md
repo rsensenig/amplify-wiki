@@ -96,12 +96,28 @@ This component wraps the [AuthenticationButton](https://github.com/ProgramEquity
 
 **Methods:** none.
 
+&nbsp;
+## CampaignCard.vue
+_Last updated: 10/29/22_
+
+A single card for rendering campaign information
+
+**Props:**
+  * campaign _Campaign_
+
+**Data:**
+  * defaultCampaignLogoUrl _string_: * defaultCampaignLogoUrl _string_: a path for a default campaign image if none is sent with Campaign.
+
+**Methods:**
+  * getCampaignLogo(campaign: Campaign): string
+    * returns a Campaign's image or the default campaign image.
+
 
 &nbsp;
 ## CampaignCards.vue
 _Last updated: 10/29/22_
 
-A generic card to display an individual campaign.
+A container to render CampaignCards.
 
 **Props:** none.
 
