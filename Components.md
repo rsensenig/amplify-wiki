@@ -30,10 +30,6 @@ Importantly, this component is also responsible for creating a transaction recor
   * createCampaignLetter(sessionId: string): void
     * Creates a campaign letter with LOB. Returns nothing, but modifies _expectedDelieryDate_ and _loading_ data attributes.
 
-**Parent Components:**
-* CompletePage.vue
-
-**Child Components:** none.
 
 &nbsp;
 ## AppFooter.vue
@@ -50,10 +46,7 @@ This component defines the footer of Amplify. It should hold important legalese,
 
 **Methods:** none.
 
-**Parent Components:**
-  * App.vue
 
-**Child Components:** none.
 
 &nbsp;
 ## AppHeader.vue
@@ -71,10 +64,6 @@ This component controls the navigation bar for the app.
 
 **Methods:** none.
 
-**Parent Components:**
-  * App.vue
-
-**Child Components:** none.
 
 &nbsp;
 ## AuthenticationButton.vue
@@ -92,12 +81,6 @@ Handles whether a user will see a log in or log out button in Step 1 of the Ampl
 
 **Methods:** none.
 
-**Parent Components:**
-  * [AuthNav.vue](https://github.com/ProgramEquity/amplify/wiki/Components/#authnavvue)
-
-**Child Components:**
-  * LogoutButton.vue
-  * LoginButton.vue
 
 &nbsp;
 ## AuthNav.vue
@@ -113,11 +96,6 @@ This component wraps the [AuthenticationButton](https://github.com/ProgramEquity
 
 **Methods:** none.
 
-**Parent Components:**
- * LetterLoad.vue
-
-**Child Components:**
-  * [AuthenticationButton.vue](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue)
 
 &nbsp;
 ## CampaignCards.vue
@@ -131,6 +109,8 @@ A generic card to display an individual campaign.
  * campaigns _Campaign[]_: an array of Campaigns returned from the campaign API.
  * publicPath _string_: an environment variable exposing the public assets folder.
  * defaultCampaignLogoUrl _string_: a path for a default campaign image if none is returned.
+
+**Computed Properties:** none.
 
 **Methods:**
   * getCampaignLogo(campaign: Campaign): string
