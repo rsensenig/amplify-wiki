@@ -2,6 +2,8 @@
 The Amplify app has a number of Vue components, which are documented here. Check back frequently for the most recent information. To report errata or suggest changes, email glenn@piludu.io or message Glenn on Slack.
 
 ## ActionComplete.vue
+_Last updated: 10/1/2022_
+
 This component renders when a user completes the check-out process after generating a campaign letter. It will show the letter delivery date, the donation amount, and other campaign-related sub-components. Because Stripe payments require a redirect away from Amplify, this component will use the _sessionId_ query parameter from Stripe to restore local state, which is stored in a user's Local Storage.
 
 Importantly, this component is also responsible for creating a transaction record for the previously complete check-out.
@@ -35,6 +37,8 @@ Importantly, this component is also responsible for creating a transaction recor
 
 &nbsp;
 ## AppFooter.vue
+_Last updated: 10/1/2022_
+
 This component defines the footer of Amplify. It should hold important legalese, as well as site navigation and social media links.
 
 **Props:** none.
@@ -53,6 +57,8 @@ This component defines the footer of Amplify. It should hold important legalese,
 
 &nbsp;
 ## AppHeader.vue
+_Last updated: 10/1/2022_
+
 This component controls the navigation bar for the app.
 
 **Props:** none.
@@ -72,6 +78,8 @@ This component controls the navigation bar for the app.
 
 &nbsp;
 ## AuthenticationButton.vue
+_Last updated: 10/1/2022_
+
 Handles whether a user will see a log in or log out button in Step 1 of the Amplify letter generation process.
 
 ![Authentication Button](https://imgur.com/7pIpQyD.png)
@@ -93,6 +101,8 @@ Handles whether a user will see a log in or log out button in Step 1 of the Ampl
 
 &nbsp;
 ## AuthNav.vue
+_Last updated: 10/1/2022_
+
 This component wraps the [AuthenticationButton](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue) component.
 
 **Props:** none.
@@ -108,3 +118,22 @@ This component wraps the [AuthenticationButton](https://github.com/ProgramEquity
 
 **Child Components:**
   * [AuthenticationButton.vue](https://github.com/ProgramEquity/amplify/wiki/Components/#authenticationbuttonvue)
+
+&nbsp;
+## CampaignCards.vue
+_Last updated: 10/29/22_
+
+A generic card to display an individual campaign.
+
+**Props:** none.
+
+**Data:**
+ * campaigns _Campaign[]_: an array of Campaigns returned from the campaign API.
+ * publicPath _string_: an environment variable exposing the public assets folder.
+ * defaultCampaignLogoUrl _string_: a path for a default campaign image if none is returned.
+
+**Methods:**
+  * getCampaignLogo(campaign: Campaign): string
+    * returns a Campaign's image or the default campaign image.
+
+
