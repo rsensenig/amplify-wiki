@@ -132,4 +132,8 @@ A container to render CampaignCards.
   * getCampaignLogo(campaign: Campaign): string
     * returns a Campaign's image or the default campaign image.
 
+&nbsp;
+## CauseCarousel.vue
+_Last Updated: 10/30/22_
 
+Holds one or more CampaignCards in a carousel element. Similar to  
