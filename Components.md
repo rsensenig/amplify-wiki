@@ -122,7 +122,7 @@ A container to render CampaignCards.
 **Props:** none.
 
 **Data:**
- * campaigns _Campaign[]_: an array of Campaigns returned from the campaign API.
+ * campaigns _Campaign[ ]_: an array of Campaigns returned from the campaign API.
  * publicPath _string_: an environment variable exposing the public assets folder.
  * defaultCampaignLogoUrl _string_: a path for a default campaign image if none is returned.
 
@@ -143,10 +143,43 @@ Holds one or more CampaignCards in a carousel element. Similar to CampaignCards.
 **Data:**
   * slides _number_: Indexes the v-slide-group that powers the carousel. See Veutify's [side group docs](https://vuetifyjs.com/en/api/v-slide-group/) for more info.
   * defaultCampaignLogoUrl _string_: Path for a default campaign image if none is returned with the Campaign.
-  * campaings _Campaign[]_: An array of Campaigns returned from the Campaign API.
+  * campaings _Campaign[ ]_: An array of Campaigns returned from the Campaign API.
 
 **Computed Properties:** none.
 
 **Methods:**
   * getCampaignLogo(campaign: Campaign): string
     *returns a Campaign's image or the default campaign image.
+
+
+&nbsp;
+## DonateMoney.vue
+_Last Updated: 10/30/22_
+
+Interface for the Amplify user to pick a donation amount and open a payment session.
+
+**Props:** none.
+
+**Data:**
+  * Donation _number_: the donation amount selected by the user in dollars.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * submit(): void
+    * Creates a checkout session with the checkout API, dumps user's state into the browser's Local Storage, and redirects the user to Stripe.
+
+
+&nbsp;
+## HeroHome.vue
+_Last Updated: 10/30/22_
+
+The Hero element for the Amplify home page.
+
+**Props:** none.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods:** none.
