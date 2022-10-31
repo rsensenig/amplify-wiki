@@ -183,3 +183,25 @@ The Hero element for the Amplify home page.
 **Computed Properties:** none.
 
 **Methods:** none.
+
+
+&nbsp;
+## LetterLoad.vue
+_Last Updated: 10/30/22_
+
+Renders a campaign letter for the user, filling in representative details.
+
+**Props:**
+  * repName _string_: Representative's name
+  * letterBody _string_: HTML string containing a letter from the Lob API.
+  * selectedRep _object<string, any>_: Information about the selected representative.
+
+**Data:** none.
+  * Date _Date_: User's current date.
+  * isSubmitted: Controls if the letter content renders. Currently is always true.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * currentDate(): Date
+    * Returns a formatted date. Is not currently used. As a side note, this type of formatting could be more easily done using the Intl module.
