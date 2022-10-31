@@ -136,4 +136,17 @@ A container to render CampaignCards.
 ## CauseCarousel.vue
 _Last Updated: 10/30/22_
 
-Holds one or more CampaignCards in a carousel element. Similar to  
+Holds one or more CampaignCards in a carousel element. Similar to CampaignCards.vue, but with more Vuetify. May be a good candidate to consolidate into one component.
+
+**Props:** none.
+
+**Data:**
+  * slides _number_: Indexes the v-slide-group that powers the carousel. See Veutify's [side group docs](https://vuetifyjs.com/en/api/v-slide-group/) for more info.
+  * defaultCampaignLogoUrl _string_: Path for a default campaign image if none is returned with the Campaign.
+  * campaings _Campaign[]_: An array of Campaigns returned from the Campaign API.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * getCampaignLogo(campaign: Campaign): string
+    *returns a Campaign's image or the default campaign image.
