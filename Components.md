@@ -205,3 +205,19 @@ Renders a campaign letter for the user, filling in representative details.
 **Methods:**
   * currentDate(): Date
     * Returns a formatted date. Is not currently used. As a side note, this type of formatting could be more easily done using the Intl module.
+
+&nbsp;
+## LoginButton.vue
+_Last Updated: 11/31/22_
+
+Appears if user is not logged in.
+
+**Props:** none.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * login (): void
+    * Redirects an unauthenticated user to the 0Auth login.
