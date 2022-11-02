@@ -221,3 +221,19 @@ Appears if user is not logged in.
 **Methods:**
   * login (): void
     * Redirects an unauthenticated user to the 0Auth login.
+
+&nbsp;
+## LoginoutButton.vue
+_Last Updated: 11/31/22_
+
+Logs a user out and redirects to home page.
+
+**Props:** none.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * login (): void
+    * Redirects an user to home back after logging them out.
