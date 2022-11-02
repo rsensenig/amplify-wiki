@@ -223,7 +223,7 @@ Appears if user is not logged in.
     * Redirects an unauthenticated user to the 0Auth login.
 
 &nbsp;
-## LoginoutButton.vue
+## LogoutButton.vue
 _Last Updated: 11/31/22_
 
 Logs a user out and redirects to home page.
