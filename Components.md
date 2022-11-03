@@ -237,3 +237,50 @@ Logs a user out and redirects to home page.
 **Methods:**
   * login (): void
     * Redirects an user to home back after logging them out.
+
+&nbsp;
+## RepresentativeCard.vue
+_Last Updated: 11/2/22_
+
+Renders information about a representative.
+
+**Props:**
+  * member _Representative_: a congressperson or gov't official to be rendered.
+
+**Data:** none.
+
+**Computed Properties:** none.
+
+**Methods**:
+  * handleRepClick(): void
+    * gets a letter from the Lob API and sets it in state, then emits the representative and the letter data to its parent component.
+
+&nbsp;
+## SearchReps.vue
+_Last Updated: 11/2/22_
+
+Handles the zipcode search and will filter results by local, state, federal, etc.
+
+**Props:** none.
+
+**Data:**
+  * letterBody _string_: Letter content from Lob API.
+  * selectedRep _Representative_: The user-selected Representative.
+  * congressMembers _Representative[]_: List of Representatives returned from Representatives API.
+  * currentFilter _string_: The filter applied to Representatives (local, state, etc).
+  * hasContent _boolean_: shows congressMembers if there are results from the Representatives API.
+  * postalCode _string_: user's zipcode
+  * listVisible _boolean_: controls displayed representatives. Can probably be merged with hasContent.
+  * isActive _boolean_: controls styling of toggled filter buttons.
+
+**Computed Properties:** none.
+
+**Methods:**
+  * handleRepSelected(letterBody: string, selectedRep: Representative, step2: string): void
+    * Sets selectedRep and letterBody. Moves stepper to step 2.
+  * checkInputContent(): void
+    * Checks for postalCode and sets hasContent.
+  * createRepList(): void
+    * Gets Representatives from Representative API.
+  * filterList(): void
+    * Gets Representatives and also filters them. Needs to be combined with createRepList().
