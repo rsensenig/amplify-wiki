@@ -1,4 +1,4 @@
-## `campaigns` table
+## `campaigns` table 
 
 Describes all campaigns and the number of letters sent for each campaign.
 
