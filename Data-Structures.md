@@ -1,3 +1,69 @@
+```mermaid
+classDiagram
+    campaigns "1" --> "0...n" letter_versions: can have
+    sent_letters "0...n" -->"1" letter_versions: corresponds to
+    constituents "1"--> "0...n" sent_letters:receives
+    stripe_payments_table "1" --> "1" sent_letters: is linked to
+    class campaigns{
+      +int id 
+      +string organization
+      +string page_url
+      +string name
+      +int letters_goal
+      +int donation_goal
+      +string logo_url
+      +enum cause
+      +enum type
+      +getCampaign()
+      +getCampaigns()
+      
+    }
+    class letter_versions{
+      +int id
+      +int template_id
+      +enum office_division
+      +string state
+      +string country
+      +string municipality
+      +integer campaign_id
+      +getLetterVersions()
+    
+    }
+    class sent_letters{
+      +int id
+      +int letter_version_id
+      +int constituent_id
+      +int request_id
+      +timestampt requested_at
+      +string rep_name
+      +string rep_address 
+      +createLetters()
+      
+    }
+
+    class constituents{
+        +string first_name
+        +string last_name
+        +int letters_sent
+        +boolean user_agreement
+        +string street_address
+        +string address_two
+        +string city
+        +string state
+        +string zip
+    }
+
+    class stripe_payments_table{
+        +int id
+        +timestamp day 
+        +int amount
+        +string currency
+        +int source_id
+        +string type
+        +createTransaction()
+    }
+```
+
 ## `campaigns` table 
 
 Describes all campaigns and the number of letters sent for each campaign.
