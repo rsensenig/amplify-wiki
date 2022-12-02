@@ -16,7 +16,7 @@ VUE_APP_LETTER_TEMPLATE = "The lob template of the letter you wish to load"
 For now, campaign assets must be added manually into src/assets/images or src/assets/text. Eventually, it would be ideal to modify our db schema to accommodate more fields.
 
 **Images**
-Images should conform to the following naming scheme:
+Images should conform to the following naming schema:
 ```bash
 campaign-logo.xxx
 campaign-background.xxx
