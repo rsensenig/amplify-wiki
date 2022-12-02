@@ -4,6 +4,7 @@
 * [Background](Background)
 * [Data Structures](Data-Structures)
 * [API Quick Reference](Amplify-API-Reference)
+* [Single Campaign Mode (Beta)](Single-Campaign-Mode)
 * Front-end
   * [Components](components)
   * Pages
