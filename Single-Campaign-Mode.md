@@ -13,7 +13,7 @@ VUE_APP_LETTER_TEMPLATE = "The lob template of the letter you wish to load"
 ```
 
 ## Adding Campaign Assets
-For now, campaign assets must be added manually, into src/assets/images or src/assets/text. Eventually, it would be ideal to modify our db schema to accommodate more fields.
+For now, campaign assets must be added manually into src/assets/images or src/assets/text. Eventually, it would be ideal to modify our db schema to accommodate more fields.
 
 **Images**
 Images should conform to the following naming scheme:
