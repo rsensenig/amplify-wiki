@@ -18,11 +18,11 @@ For now, campaign assets must be added manually into src/assets/images or src/as
 **Images**
 Images should conform to the following naming schema:
 ```bash
-campaign-logo.xxx
-campaign-background.xxx
-campaign-img-1.xxx (should be around 350x255)
-campaign-img-2.xxx
-campaign-img-3.xxx
+campaign-logo.webp
+campaign-background.webp
+campaign-img-1.webp (should be around 350x255)
+campaign-img-2.webp
+campaign-img-3.webp
 ```
 
 **Text**
