@@ -20,9 +20,9 @@ Images should conform to the following naming schema:
 ```bash
 campaign-logo.xxx
 campaign-background.xxx
-campaign-img-1.xxx
+campaign-img-1.xxx (should be around 350x255)
 campaign-img-2.xxx
-campaign-img3.xxx
+campaign-img-3.xxx
 ```
 
 **Text**
