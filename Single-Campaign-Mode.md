@@ -24,6 +24,7 @@ campaign-img-1.webp (should be around 350x255)
 campaign-img-2.webp
 campaign-img-3.webp
 ```
+Amplify will expect .webp files. Use [Google's webp conversion tool](https://developers.google.com/speed/webp/docs/precompiled) or some similar utility.
 
 **Text**
 Text blurbs can be added in a file called text.json in src/assets/text with the following schema:
