@@ -34,3 +34,23 @@ Text blurbs can be added in a file called text.json in src/assets/text with the 
   "campaign_text": "The landing page's text body. Line breaks can be done with '\n'. The page's CSS will take care of making them work."
 }
 ```
+
+## Overriding Brand Colors
+Amplify now supports custom branding for SCM. To override styles, modify /src/configs/theme.js.
+```bash
+// Dark theme support coming soon!
+
+const lightTheme = {
+  'primary': '#083d77',
+  'primary-alt': '#38618c',
+  'secondary': '#fe5e41',
+  'secondary-alt': '#fcd7ad',
+  'tertiary': '#F3B700',
+  'tertiary-alt': '#080085',
+  'dark': '#333333',
+  'med-gray': '#bbbbbb',
+  'light-gray': '#eeeeee',
+  'white': '#ffffff',
+}
+```
+Less variables with the corresponding names (ex. @secondary-alt, @dark, etc.) will also be available globally.
