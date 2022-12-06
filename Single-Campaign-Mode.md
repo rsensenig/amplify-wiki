@@ -16,6 +16,7 @@ VUE_APP_LETTER_TEMPLATE = "The lob template of the letter you wish to load"
 For now, campaign assets must be added manually into src/assets/images or src/assets/text. Eventually, it would be ideal to modify our db schema to accommodate more fields.
 
 **Images**
+
 Images should conform to the following naming schema:
 ```bash
 campaign-logo.webp
@@ -27,6 +28,7 @@ campaign-img-3.webp
 Amplify will expect .webp files. Use [Google's webp conversion tool](https://developers.google.com/speed/webp/docs/precompiled) or some similar utility.
 
 **Text**
+
 Text blurbs can be added in a file called text.json in src/assets/text with the following schema:
 ```bash
 {
