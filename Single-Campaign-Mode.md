@@ -56,3 +56,5 @@ const lightTheme = {
 }
 ```
 Less variables with the corresponding names (ex. @secondary-alt, @dark, etc.) will also be available globally.
+
+**A note on text contrast:** You may want to tweak some of the text if you find the contrast with a custom color is too low. Vuetify does a pretty good job of switching colors on some things like v-btns, but in other instances, manual intervention yields a better result.
