@@ -1,5 +1,5 @@
 
-A description of the constituent user journey. For types of users, and the user story, click the `User Story` link in the sidebar.
+A description of the constituent user journey. For types of users, and the user story, click the `User Background` link in the sidebar.
 
 ### Browse Causes
 
