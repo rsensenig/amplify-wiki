@@ -4,7 +4,7 @@
 * [App Structure](App-Structure)
 * Users
   * [User Background](User-Background)
-  * [User-Journey](User-Journey)
+  * [User Journey](User-Journey)
 * [Data Structures](Data-Structures)
 * [API Quick Reference](Amplify-API-Reference)
 * [Single Campaign Mode (Beta)](Single-Campaign-Mode)
