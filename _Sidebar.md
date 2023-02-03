@@ -1,7 +1,9 @@
 * [Home](home)
 * [App Logic](App-Logic)
 * [App Structure](App-Structure)
-* [Background](Background)
+* Users
+  * [User Background](User-Background)
+  * [User-Journey](User-Journey)
 * [Data Structures](Data-Structures)
 * [API Quick Reference](Amplify-API-Reference)
 * [Single Campaign Mode (Beta)](Single-Campaign-Mode)
