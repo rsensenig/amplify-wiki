@@ -1,4 +1,5 @@
 * [Home](home)
+* [App Demo](App-Demo)
 * [App Logic](App-Logic)
 * [App Structure](App-Structure)
 * Users
