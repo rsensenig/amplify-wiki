@@ -7,7 +7,7 @@
 # Constituent User Story
 ![unnamed](https://user-images.githubusercontent.com/66452376/142285757-39f3570d-f52a-43e0-809a-32dcfa9412c5.jpg)
 
-* Stage 1: Users are being sent onboarding via advocacy groups - preview and Auth0 authentication
-* Stage 2: User reviews letter, adds validation and sends payment
-* Stage 3: User has successfully sent letter and/or donated and is added to notification channels
+* Stage 1: Constituents are being sent onboarding via advocacy groups - preview and Auth0 authentication
+* Stage 2: Constituent reviews letter, adds validation and sends payment
+* Stage 3: Constituent has successfully sent letter and/or donated and is added to notification channels
 
